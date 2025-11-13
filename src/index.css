@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #0A1D56;
+}
+
+body.dark {
+  background-color: #050816;
+  color: #F8FAFC;
+}
+
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(120deg, rgba(10, 29, 86, 0.2), rgba(255, 177, 0, 0.4));
+  border-radius: inherit;
+  z-index: -1;
+}
