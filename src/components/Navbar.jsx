@@ -50,7 +50,7 @@ const Navbar = ({ theme, setTheme }) => {
           <div className="flex flex-col items-end">
             <span className="text-xs font-medium text-primary/60 dark:text-slate-400">Ready to talk?</span>
             <a
-              href="https://calendly.com"
+              href="https://brightdigital.youcanbook.me"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full bg-accent px-5 py-2 text-sm font-semibold text-primary shadow-glow transition hover:-translate-y-0.5"
@@ -99,7 +99,7 @@ const Navbar = ({ theme, setTheme }) => {
             <div className="mt-3 flex flex-col">
               <span className="mb-1 text-xs font-medium text-primary/60 dark:text-slate-400">Ready to talk?</span>
               <a
-                href="https://calendly.com"
+                href="https://brightdigital.youcanbook.me"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}

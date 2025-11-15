@@ -13,7 +13,7 @@ const FloatingButtons = () => (
     <div className="fixed bottom-24 right-6 z-30 hidden flex-col items-end md:flex">
       <span className="mb-1 text-xs font-medium text-primary/70 dark:text-slate-300">Ready to Get Started?</span>
       <a
-        href="https://calendly.com"
+        href="https://brightdigital.youcanbook.me"
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-primary shadow-glow transition hover:-translate-y-0.5"

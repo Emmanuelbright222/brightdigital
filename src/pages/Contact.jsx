@@ -50,7 +50,7 @@ const Contact = () => {
           <div className="mt-8 flex flex-col items-center">
             <span className="mb-2 text-sm font-medium text-primary/70 dark:text-slate-300">Ready to get started or take action?</span>
             <a
-              href="https://calendly.com"
+              href="https://brightdigital.youcanbook.me"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-3 text-sm font-semibold text-primary shadow-glow transition hover:-translate-y-0.5"
@@ -164,7 +164,7 @@ const Contact = () => {
                 </li>
               </ul>
               <a
-                href="https://calendly.com"
+                href="https://brightdigital.youcanbook.me"
                 className="mt-6 inline-flex w-full items-center justify-center rounded-full border border-primary/20 px-6 py-3 text-sm font-semibold text-primary transition hover:border-primary hover:text-primary dark:border-slate-700 dark:text-slate-200"
               >
                 Book a strategy call

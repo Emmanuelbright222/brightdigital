@@ -211,12 +211,14 @@ const Home = () => {
             align="center"
           />
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
-            <Link
-              to="https://calendly.com"
+            <a
+              href="https://brightdigital.youcanbook.me"
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full bg-accent px-8 py-3 text-sm font-semibold text-primary shadow-glow transition hover:-translate-y-0.5"
             >
               Book Strategy Call
-            </Link>
+            </a>
             <Link
               to="/pricing"
               className="rounded-full border border-primary/20 px-8 py-3 text-sm font-semibold text-primary transition hover:border-primary hover:text-primary dark:border-slate-700 dark:text-slate-200"
