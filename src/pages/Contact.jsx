@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import SectionHeading from '../components/SectionHeading.jsx';
 import { faqs } from '../data/content.js';
-import { FiMail, FiPhone, FiMessageCircle } from 'react-icons/fi';
+import { FiMail, FiPhone, FiMessageCircle, FiInfo } from 'react-icons/fi';
 
 const initialState = { name: '', email: '', company: '', message: '' };
 
@@ -62,7 +62,18 @@ const Contact = () => {
       </section>
 
       <section className="px-6">
-        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="mx-auto max-w-6xl space-y-6">
+          <div className="flex items-start gap-4 rounded-2xl border-2 border-accent/30 bg-accent/10 p-5 dark:border-accent/20 dark:bg-accent/5">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent text-primary">
+              <FiInfo size={20} />
+            </div>
+            <div className="flex-1">
+              <p className="text-sm font-medium text-primary dark:text-white">
+                <strong>Please note:</strong> This contact form is designed for initial inquiries and information requests. Once you've submitted your enquiry, we recommend scheduling a consultation call using the button above to discuss your specific needs and explore how we can help accelerate your growth.
+              </p>
+            </div>
+          </div>
+          <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="rounded-[32px] border border-primary/10 bg-white p-10 shadow-xl dark:border-slate-700 dark:bg-slate-900">
             <h3 className="text-xl font-semibold text-primary dark:text-white">Tell us about your goals</h3>
             <p className="mt-2 text-sm text-primary/70 dark:text-slate-300">
@@ -159,6 +170,7 @@ const Contact = () => {
                 Book a strategy call
               </a>
             </div>
+          </div>
           </div>
         </div>
       </section>
