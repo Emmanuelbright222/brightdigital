@@ -1,7 +1,24 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const CookieConsent = () => {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const consent = localStorage.getItem('cookieConsent');
+    if (!consent) {
+      setVisible(true);
+    }
+  }, []);
+
+  const handleAccept = () => {
+    localStorage.setItem('cookieConsent', 'accepted');
+    setVisible(false);
+  };
+
+  const handleDecline = () => {
+    localStorage.setItem('cookieConsent', 'declined');
+    setVisible(false);
+  };
 
   if (!visible) return null;
 
@@ -13,13 +30,13 @@ const CookieConsent = () => {
         </p>
         <div className="flex gap-3">
           <button
-            onClick={() => setVisible(false)}
+            onClick={handleDecline}
             className="rounded-full border border-primary/10 px-4 py-2 font-semibold text-primary transition hover:bg-primary/10 dark:border-slate-700 dark:text-slate-200"
           >
             Decline
           </button>
           <button
-            onClick={() => setVisible(false)}
+            onClick={handleAccept}
             className="rounded-full bg-primary px-4 py-2 font-semibold text-white transition hover:bg-primary/90"
           >
             Accept

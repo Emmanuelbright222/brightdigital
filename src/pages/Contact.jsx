@@ -43,10 +43,21 @@ const Contact = () => {
         <div className="mx-auto max-w-4xl text-center">
           <SectionHeading
             eyebrow="Contact"
-            title="Let’s build your next growth chapter"
-            description="Share your objectives, timelines, and metrics. We’ll respond within one business day with next steps."
+            title="Let's build your next growth chapter"
+            description="Share your objectives, timelines, and metrics. We'll respond within one business day with next steps."
             align="center"
           />
+          <div className="mt-8 flex flex-col items-center">
+            <span className="mb-2 text-sm font-medium text-primary/70 dark:text-slate-300">Ready to get started or take action?</span>
+            <a
+              href="https://calendly.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-3 text-sm font-semibold text-primary shadow-glow transition hover:-translate-y-0.5"
+            >
+              Schedule a meeting
+            </a>
+          </div>
         </div>
       </section>
 

@@ -47,12 +47,17 @@ const Navbar = ({ theme, setTheme }) => {
           >
             {theme === 'dark' ? <FiSun size={18} /> : <FiMoon size={18} />}
           </button>
-          <Link
-            to="/contact"
-            className="rounded-full bg-accent px-5 py-2 text-sm font-semibold text-primary shadow-glow transition hover:-translate-y-0.5"
-          >
-            Book Consultation
-          </Link>
+          <div className="flex flex-col items-end">
+            <span className="text-xs font-medium text-primary/60 dark:text-slate-400">Ready to talk?</span>
+            <a
+              href="https://calendly.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-accent px-5 py-2 text-sm font-semibold text-primary shadow-glow transition hover:-translate-y-0.5"
+            >
+              Schedule a Call
+            </a>
+          </div>
         </div>
         <button
           className="rounded-lg border border-primary/10 p-2 text-primary dark:border-slate-700 dark:text-slate-100 md:hidden"
@@ -91,13 +96,18 @@ const Navbar = ({ theme, setTheme }) => {
               {theme === 'dark' ? <FiSun size={18} /> : <FiMoon size={18} />}
               Toggle Theme
             </button>
-            <Link
-              to="/contact"
-              onClick={() => setIsOpen(false)}
-              className="mt-3 rounded-full bg-accent px-4 py-2 text-center font-semibold text-primary"
-            >
-              Book Consultation
-            </Link>
+            <div className="mt-3 flex flex-col">
+              <span className="mb-1 text-xs font-medium text-primary/60 dark:text-slate-400">Ready to talk?</span>
+              <a
+                href="https://calendly.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+                className="rounded-full bg-accent px-4 py-2 text-center font-semibold text-primary"
+              >
+                Schedule a Call
+              </a>
+            </div>
           </nav>
         </div>
       )}

@@ -6,16 +6,72 @@ import { FiArrowLeft } from 'react-icons/fi';
 const renderContent = (content) => {
   const blocks = content.split('\n\n');
   return blocks.map((block, index) => {
+    // H1 headings
     if (block.startsWith('# ')) {
       return (
-        <h2 key={index} className="text-2xl font-semibold text-primary dark:text-white">
+        <h1 key={index} className="mt-8 text-3xl font-semibold text-primary dark:text-white first:mt-0">
           {block.replace('# ', '')}
+        </h1>
+      );
+    }
+    // H2 headings
+    if (block.startsWith('## ')) {
+      return (
+        <h2 key={index} className="mt-8 text-2xl font-semibold text-primary dark:text-white first:mt-0">
+          {block.replace('## ', '')}
         </h2>
       );
     }
+    // H3 headings
+    if (block.startsWith('### ')) {
+      return (
+        <h3 key={index} className="mt-6 text-xl font-semibold text-primary dark:text-white first:mt-0">
+          {block.replace('### ', '')}
+        </h3>
+      );
+    }
+    // Lists
+    if (block.includes('\n- ') || block.startsWith('- ')) {
+      const items = block.split('\n').filter((line) => line.trim().startsWith('- '));
+      return (
+        <ul key={index} className="mt-4 space-y-2">
+          {items.map((item, itemIndex) => {
+            const text = item.replace(/^-\s*/, '').trim();
+            // Handle bold text in list items
+            const parts = text.split(/(\*\*.*?\*\*)/g);
+            return (
+              <li key={itemIndex} className="flex gap-2 text-base leading-relaxed text-primary/80 dark:text-slate-300">
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                <span>
+                  {parts.map((part, partIndex) =>
+                    part.startsWith('**') && part.endsWith('**') ? (
+                      <strong key={partIndex} className="font-semibold text-primary dark:text-white">
+                        {part.replace(/\*\*/g, '')}
+                      </strong>
+                    ) : (
+                      part
+                    )
+                  )}
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+      );
+    }
+    // Regular paragraphs with bold text support
+    const parts = block.split(/(\*\*.*?\*\*)/g);
     return (
       <p key={index} className="text-base leading-relaxed text-primary/80 dark:text-slate-300">
-        {block.replace(/\n/g, ' ')}
+        {parts.map((part, partIndex) =>
+          part.startsWith('**') && part.endsWith('**') ? (
+            <strong key={partIndex} className="font-semibold text-primary dark:text-white">
+              {part.replace(/\*\*/g, '')}
+            </strong>
+          ) : (
+            part
+          )
+        )}
       </p>
     );
   });
