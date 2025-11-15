@@ -46,11 +46,6 @@ export const services = [
     icon: 'FiMail',
   },
   {
-    title: 'Web Design & Development',
-    description: 'Conversion-optimized websites built with modern frameworks.',
-    icon: 'FiMonitor',
-  },
-  {
     title: 'Influencer Marketing',
     description: 'Creator collaborations backed by data and brand safety.',
     icon: 'FiUsers',

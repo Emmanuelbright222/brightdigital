@@ -134,6 +134,7 @@ const Home = () => {
                 eyebrow="Why choose us"
                 title="Your growth partner from strategy to scale"
                 description="We work as an embedded growth team. Expect radical transparency, relentless optimization, and senior strategists in every meeting."
+                variant="white"
               />
             </div>
             <ul className="space-y-6 text-sm">
@@ -141,7 +142,7 @@ const Home = () => {
                 <li key={item.title} className="flex gap-4">
                   <FiCheckCircle className="mt-1 text-accent" size={20} />
                   <div>
-                    <div className="text-lg font-semibold">{item.title}</div>
+                    <div className="text-lg font-semibold text-white">{item.title}</div>
                     <p className="mt-1 text-white/80">{item.description}</p>
                   </div>
                 </li>

@@ -41,8 +41,9 @@ const Services = () => (
       <div className="mx-auto max-w-5xl rounded-[36px] border border-primary/10 bg-gradient-to-br from-primary to-primary/80 p-12 text-white shadow-2xl dark:from-slate-900 dark:to-primary">
         <SectionHeading
           eyebrow="Custom Strategy"
-          title="Let’s design a growth program tailored to your goals"
-          description="Share your KPIs, channels, and challenges. We’ll architect a roadmap and show you the impact before we start."
+          title="Let's design a growth program tailored to your goals"
+          description="Share your KPIs, channels, and challenges. We'll architect a roadmap and show you the impact before we start."
+          variant="white"
         />
         <Link
           to="/contact"
